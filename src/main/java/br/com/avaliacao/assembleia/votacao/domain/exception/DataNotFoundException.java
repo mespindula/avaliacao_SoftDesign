@@ -1,0 +1,25 @@
+package br.com.avaliacao.assembleia.votacao.domain.exception;
+
+import br.com.avaliacao.assembleia.votacao.domain.exception.util.ExceptionCode;
+
+public class DataNotFoundException extends RuntimeException {
+
+  private ExceptionCode exceptionCode;
+
+  public DataNotFoundException() {
+    super();
+  }
+
+  public DataNotFoundException(final String msg) {
+    super(msg);
+  }
+
+  public DataNotFoundException(final String msg, final ExceptionCode exceptionCode) {
+    super(msg);
+    this.exceptionCode = exceptionCode;
+  }
+
+  public ExceptionCode getExceptionCode() {
+    return exceptionCode;
+  }
+}
